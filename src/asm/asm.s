@@ -257,6 +257,72 @@ _x86_64_asm_write_cr4:
     movq %rdi, %cr4
     retq
 
+.global _x86_64_asm_read_dr0
+.p2align 4
+_x86_64_asm_read_dr0:
+    movq %dr0, %rax
+    retq
+
+.global _x86_64_asm_read_dr1
+.p2align 4
+_x86_64_asm_read_dr1:
+    movq %dr1, %rax
+    retq
+
+.global _x86_64_asm_read_dr2
+.p2align 4
+_x86_64_asm_read_dr2:
+    movq %dr2, %rax
+    retq
+
+.global _x86_64_asm_read_dr3
+.p2align 4
+_x86_64_asm_read_dr3:
+    movq %dr3, %rax
+    retq
+
+.global _x86_64_asm_read_dr6
+.p2align 4
+_x86_64_asm_read_dr6:
+    movq %dr6, %rax
+    retq
+
+.global _x86_64_asm_read_dr7
+.p2align 4
+_x86_64_asm_read_dr7:
+    movq %dr7, %rax
+    retq
+
+.global _x86_64_asm_write_dr0
+.p2align 4
+_x86_64_asm_write_dr0:
+    movq %rdi, %dr0
+    retq
+
+.global _x86_64_asm_write_dr1
+.p2align 4
+_x86_64_asm_write_dr1:
+    movq %rdi, %dr1
+    retq
+
+.global _x86_64_asm_write_dr2
+.p2align 4
+_x86_64_asm_write_dr2:
+    movq %rdi, %dr2
+    retq
+
+.global _x86_64_asm_write_dr3
+.p2align 4
+_x86_64_asm_write_dr3:
+    movq %rdi, %dr3
+    retq
+
+.global _x86_64_asm_write_dr7
+.p2align 4
+_x86_64_asm_write_dr7:
+    movq %rdi, %dr7
+    retq
+
 .global _x86_64_asm_rdmsr
 .p2align 4
 _x86_64_asm_rdmsr:

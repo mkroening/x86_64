@@ -242,6 +242,72 @@ extern "sysv64" {
 
     #[cfg_attr(
         any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_read_dr0"
+    )]
+    pub(crate) fn x86_64_asm_read_dr0() -> u64;
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_write_dr0"
+    )]
+    pub(crate) fn x86_64_asm_write_dr0(value: u64);
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_read_dr1"
+    )]
+    pub(crate) fn x86_64_asm_read_dr1() -> u64;
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_write_dr1"
+    )]
+    pub(crate) fn x86_64_asm_write_dr1(value: u64);
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_read_dr2"
+    )]
+    pub(crate) fn x86_64_asm_read_dr2() -> u64;
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_write_dr2"
+    )]
+    pub(crate) fn x86_64_asm_write_dr2(value: u64);
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_read_dr3"
+    )]
+    pub(crate) fn x86_64_asm_read_dr3() -> u64;
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_write_dr3"
+    )]
+    pub(crate) fn x86_64_asm_write_dr3(value: u64);
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_read_dr6"
+    )]
+    pub(crate) fn x86_64_asm_read_dr6() -> u64;
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_read_dr7"
+    )]
+    pub(crate) fn x86_64_asm_read_dr7() -> u64;
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
+        link_name = "_x86_64_asm_write_dr7"
+    )]
+    pub(crate) fn x86_64_asm_write_dr7(value: u64);
+
+    #[cfg_attr(
+        any(target_env = "gnu", target_env = "musl"),
         link_name = "_x86_64_asm_rdmsr"
     )]
     pub(crate) fn x86_64_asm_rdmsr(msr: u32) -> u64;
