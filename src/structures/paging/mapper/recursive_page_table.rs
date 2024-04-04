@@ -787,7 +787,7 @@ impl<'a> Translate for RecursivePageTable<'a> {
         if p3_entry.flags().contains(PageTableFlags::HUGE_PAGE) {
             let entry = &p3[addr.p3_index()];
             let frame = PhysFrame::containing_address(entry.addr());
-            let offset = addr.as_u64() & 0o_777_777_7777;
+            let offset = addr.as_u64() & 0o7_777_777_777;
             let flags = entry.flags();
             return TranslateResult::Mapped {
                 frame: MappedFrame::Size1GiB(frame),
@@ -804,7 +804,7 @@ impl<'a> Translate for RecursivePageTable<'a> {
         if p2_entry.flags().contains(PageTableFlags::HUGE_PAGE) {
             let entry = &p2[addr.p2_index()];
             let frame = PhysFrame::containing_address(entry.addr());
-            let offset = addr.as_u64() & 0o_777_7777;
+            let offset = addr.as_u64() & 0o7_777_777;
             let flags = entry.flags();
             return TranslateResult::Mapped {
                 frame: MappedFrame::Size2MiB(frame),
