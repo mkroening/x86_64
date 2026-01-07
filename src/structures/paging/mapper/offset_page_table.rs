@@ -51,7 +51,7 @@ impl<'a> OffsetPageTable<'a> {
 
 /// A [`PageTableFrameMapping`] implementation that requires that the complete physical memory is mapped at some
 /// offset in the virtual address space.
-#[derive(Debug)]
+#[derive(Clone, Copy, Debug)]
 pub struct PhysOffset {
     phys_offset: VirtAddr,
 }
