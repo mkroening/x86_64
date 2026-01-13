@@ -51,7 +51,7 @@ impl<'a, P: PageTableFrameMapping> MappedPageTable<'a, P> {
     }
 
     /// Helper function for implementing Mapper. Safe to limit the scope of unsafe, see
-    /// https://github.com/rust-lang/rfcs/pull/2585.
+    /// <https://github.com/rust-lang/rfcs/pull/2585>.
     fn map_to_1gib<A>(
         &mut self,
         page: Page<Size1GiB>,
@@ -79,7 +79,7 @@ impl<'a, P: PageTableFrameMapping> MappedPageTable<'a, P> {
     }
 
     /// Helper function for implementing Mapper. Safe to limit the scope of unsafe, see
-    /// https://github.com/rust-lang/rfcs/pull/2585.
+    /// <https://github.com/rust-lang/rfcs/pull/2585>.
     fn map_to_2mib<A>(
         &mut self,
         page: Page<Size2MiB>,
@@ -112,7 +112,7 @@ impl<'a, P: PageTableFrameMapping> MappedPageTable<'a, P> {
     }
 
     /// Helper function for implementing Mapper. Safe to limit the scope of unsafe, see
-    /// https://github.com/rust-lang/rfcs/pull/2585.
+    /// <https://github.com/rust-lang/rfcs/pull/2585>.
     fn map_to_4kib<A>(
         &mut self,
         page: Page<Size4KiB>,
